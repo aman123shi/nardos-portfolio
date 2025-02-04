@@ -5,7 +5,7 @@ import { useRef } from "react";
 
 export function Navbar() {
   const sideMenuRef = useRef<HTMLUListElement>(null);
-
+  //39
   const openMenu = () => {
     if (sideMenuRef.current) {
       sideMenuRef.current.style.transform = "translateX(-16rem)";
