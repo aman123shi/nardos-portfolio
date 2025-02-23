@@ -4,7 +4,7 @@ import React from "react";
 
 export function Header() {
   return (
-    <div>
+    <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
       <div>
         <Image
           src={assets.profile_img}
@@ -16,6 +16,7 @@ export function Header() {
         Hi! I&apos;M Nardos Shibeshi{" "}
         <Image src={assets.hand_icon} className="w-6" alt="" />
       </h3>
+
       <h1 className="text-3xl sm:text-6xl  lg:text-[66px] font-Ovo">
         {"UI/UX Designer and Graphics Designer "}
         {/* UI/UX Designer and Graphics Designer based in Addis Ababa, Ethiopia. */}
