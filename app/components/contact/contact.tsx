@@ -4,7 +4,7 @@ import { assets } from "@/app/assets/assets";
 import Image from "next/image";
 import React, { useState } from "react";
 
-export function Contact() {
+export function Contact({ isDarkMode }: { isDarkMode: boolean }) {
   const [result, setResult] = useState("");
 
   const onSubmit = async (event: any) => {

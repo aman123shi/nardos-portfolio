@@ -2,7 +2,7 @@ import { assets, workData } from "@/app/assets/assets";
 import Image from "next/image";
 import React from "react";
 
-export function Work() {
+export function Work({ isDarkMode }: { isDarkMode: boolean }) {
   return (
     <div id="work" className="w-full px-[12%] py-10 scroll-mt-20">
       <h4 className="text-center mb-2 text-lg font-Ovo">What I have worked</h4>

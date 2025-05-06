@@ -2,7 +2,7 @@ import { assets, serviceData } from "@/app/assets/assets";
 import Image from "next/image";
 import React from "react";
 
-export function Services() {
+export function Services({ isDarkMode }: { isDarkMode: boolean }) {
   return (
     <div id="services" className="w-full px-[12%] py-10 scroll-mt-20">
       <h4 className="text-center mb-2 text-lg font-Ovo">What I Offer</h4>

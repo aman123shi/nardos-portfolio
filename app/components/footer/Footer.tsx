@@ -2,7 +2,7 @@ import { assets } from "@/app/assets/assets";
 import Image from "next/image";
 import React from "react";
 
-export function Footer() {
+export function Footer({ isDarkMode }: { isDarkMode: boolean }) {
   const date = new Date();
   const year = date.getFullYear();
   return (
