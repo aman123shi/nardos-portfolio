@@ -19,7 +19,11 @@ export function Header({ isDarkMode }: { isDarkMode: boolean }) {
 
       <h1 className="text-3xl sm:text-6xl  lg:text-[66px] font-Ovo">
         {"UI/UX Designer and Graphics Designer "}
-        {/* UI/UX Designer and Graphics Designer based in Addis Ababa, Ethiopia. */}
+        {
+          /* UI/UX Designer and Graphics Designer based in Addis Ababa, Ethiopia. */ isDarkMode
+            ? ""
+            : ""
+        }
       </h1>
       <p className="max-w-2xl mx-auto font-Ovo">
         I am passionate about creating beautiful and user-friendly designs. with
@@ -31,7 +35,7 @@ export function Header({ isDarkMode }: { isDarkMode: boolean }) {
       <div className="flex flex-col sm:flex-row gap-4 mt-4 items-center">
         <a
           href="#contact"
-          className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2"
+          className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent"
         >
           {"contact me "}
           <Image src={assets.right_arrow_white} alt="" className="w-4" />
@@ -40,7 +44,7 @@ export function Header({ isDarkMode }: { isDarkMode: boolean }) {
         <a
           href="/sample-resume.pdf"
           download
-          className="px-10 py-3 border  rounded-full border-gray-500 text-black flex items-center gap-2"
+          className="px-10 py-3 border  rounded-full border-gray-500 text-black flex items-center bg-white gap-2 dark:text-black"
         >
           {"my resume"}
           <Image src={assets.download_icon} alt="" className=" w-4" />
