@@ -74,7 +74,7 @@ rounded-md bg-white mb-6  dark:bg-darkHover/30 dark:border-white/90"
           type="submit"
           className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover: bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover"
         >
-          Submit now{" "}
+          Submit now{isDarkMode ? " " : ""}
           <Image src={assets.right_arrow_white} alt="" className="w-4" />
         </button>
         <p className="mt-4">{result}</p>
