@@ -26,19 +26,34 @@ export function Footer({ isDarkMode }: { isDarkMode: boolean }) {
         <p>© {year} Nardos Shibeshi. All rights reserved.</p>
         <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
           <li>
-            <a target="_blank" href="https://instagram.com/greatstackdev">
-              GitHub
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/nardos-shibeshi-3a3836276/"
+            >
+              <Image src={assets.linkedin_icon} alt="" className="w-6" />
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.instagram.com/be4luck/">
+              <Image src={assets.instagram_icon} alt="" className="w-6" />
             </a>
           </li>
 
           <li>
-            <a target="_blank" href="https://instagram.com/greatstackdev">
-              LinkedIn
+            <a target="_blank" href="https://www.instagram.com/be4luck/">
+              <Image src={assets.twitter_icon} alt="" className="w-6" />
             </a>
           </li>
+
           <li>
-            <a target="_blank" href="https://instagram.com/greatstackdev">
-              Twitter
+            <a target="_blank" href="https://youtube.com/greatstackdevg">
+              <Image src={assets.youtube_icon} alt="" className="w-6" />
+            </a>
+          </li>
+
+          <li>
+            <a target="_blank" href="https://tiktok.com/greatstackdevf">
+              <Image src={assets.tik_tok_icon} alt="" className="w-6" />
             </a>
           </li>
         </ul>
