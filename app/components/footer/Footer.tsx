@@ -34,7 +34,7 @@ export function Footer({ isDarkMode }: { isDarkMode: boolean }) {
             </a>
           </li>
           <li>
-            <a target="_blank" href="https://www.instagram.com/be4luck/">
+            <a target="_blank" href="https://www.instagram.com/nardidesign15">
               <Image src={assets.instagram_icon} alt="" className="w-6" />
             </a>
           </li>

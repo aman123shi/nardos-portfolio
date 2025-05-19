@@ -42,7 +42,7 @@ export function Header({ isDarkMode }: { isDarkMode: boolean }) {
         </a>
 
         <a
-          href="/sample-resume.pdf"
+          href="/resume.pdf"
           download
           className="px-10 py-3 border  rounded-full border-gray-500 text-black flex items-center bg-white gap-2 dark:text-black"
         >
