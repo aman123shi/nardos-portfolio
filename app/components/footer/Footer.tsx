@@ -19,7 +19,7 @@ export function Footer({ isDarkMode }: { isDarkMode: boolean }) {
             alt=""
             className="w-6"
           />
-          nardosshibeshi@gmail.com
+          nardosshibeshi2011@gmail.com
         </div>
       </div>
       <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">

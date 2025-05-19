@@ -50,6 +50,7 @@ import tutor from "./tutor.png";
 import illustration from "./illustration.png";
 import ui_ux from "./ui-ux.png";
 import data_encoding from "./data-encoding.png";
+import ai from "./ai.png";
 
 export const assets = {
   instagram_icon,
@@ -65,7 +66,7 @@ export const assets = {
   illustration,
   ui_ux,
   data_encoding,
-
+  ai,
   //
   user_image,
   code_icon,
@@ -184,7 +185,7 @@ export const infoList = [
 export const toolsData = [
   assets.figma,
   assets.canva_icon,
-  assets.xd_icon,
+  assets.ai,
   assets.photoshop_icon,
   assets.capcut_icon,
 ];
