@@ -12,7 +12,7 @@ export function Contact({ isDarkMode }: { isDarkMode: boolean }) {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "07b47ba1-4a6b-421d-80b8-5e52b63d5b1d");
+    formData.append("access_key", "65feb55e-e9c4-46d6-82d7-33610bed2900");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
