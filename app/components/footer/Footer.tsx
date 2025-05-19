@@ -40,19 +40,19 @@ export function Footer({ isDarkMode }: { isDarkMode: boolean }) {
           </li>
 
           <li>
-            <a target="_blank" href="https://www.instagram.com/be4luck/">
+            <a target="_blank" href="https://x.com/Nardi0987">
               <Image src={assets.twitter_icon} alt="" className="w-6" />
             </a>
           </li>
 
           <li>
-            <a target="_blank" href="https://youtube.com/greatstackdevg">
+            <a target="_blank" href="https://youtube.com/@design-site">
               <Image src={assets.youtube_icon} alt="" className="w-6" />
             </a>
           </li>
 
           <li>
-            <a target="_blank" href="https://tiktok.com/greatstackdevf">
+            <a target="_blank" href="https://www.tiktok.com/@be4luck">
               <Image src={assets.tik_tok_icon} alt="" className="w-6" />
             </a>
           </li>
