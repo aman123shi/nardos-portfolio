@@ -110,28 +110,28 @@ export const assets = {
 export const workData = [
   {
     title: "Frontend project",
-    description: "Web Design",
+    description: "A simple frontend project with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
     bgImage: "/work-1.png",
     images: ["/work-1.png", "/work-2.png", "/work-3.png"],
     link: "https://example.com/frontend-project"
   },
   {
     title: "Geo based app",
-    description: "Mobile App",
+    description: "A mobile app for a geo based service with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
     bgImage: "/work-2.png",
     images: ["/work-2.png", "/work-3.png", "/work-4.png"],
     link: "https://example.com/geo-app"
   },
   {
     title: "Photography site",
-    description: "Web Design",
+    description: "A photography site for a photographer with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
     bgImage: "/work-3.png",
     images: ["/work-3.png", "/work-4.png", "/work-1.png"],
     link: "https://example.com/photography"
   },
   {
     title: "UI/UX designing",
-    description: "UI/UX Design",
+    description: "A UI/UX design for a mobile app with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
     bgImage: "/work-4.png",
     images: ["/work-4.png", "/work-1.png", "/work-2.png"],
     link: "https://example.com/uiux-design"
