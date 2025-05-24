@@ -246,11 +246,4 @@ export const prototypeData: PrototypeData[] = [
       "A sleek and modern e-commerce app prototype for smart watches. This design features an intuitive user interface with easy navigation, product categories, and a seamless checkout process. The prototype includes interactive elements to enhance user experience, such as product previews, reviews, and a wishlist feature.",
     videoId: "La1fXOHYgHY",
   },
-
-  {
-    title: "Registration Page Prototype",
-    description:
-      "A sleek and modern registration page prototype for a food ordering app. This design features an intuitive user interface with easy navigation, input fields for user information, and a seamless registration process. The prototype includes interactive elements to enhance user experience, such as validation messages and progress indicators.",
-    videoId: "8jTLLMdAxco",
-  },
 ];
