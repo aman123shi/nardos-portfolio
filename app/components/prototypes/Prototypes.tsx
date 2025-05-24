@@ -1,32 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { fadeIn, fadeInUp, staggerContainer } from '@/app/utils/animations';
-
-interface PrototypeData {
-  title: string;
-  description: string;
-  videoId: string;
-}
-
-// How to get YouTube video ID:
-// 1. From https://www.youtube.com/watch?v=dQw4w9WgXcQ -> videoId is "dQw4w9WgXcQ"
-// 2. From https://youtu.be/dQw4w9WgXcQ -> videoId is "dQw4w9WgXcQ"
-// 3. From https://www.youtube.com/embed/dQw4w9WgXcQ -> videoId is "dQw4w9WgXcQ"
-
-const prototypeData: PrototypeData[] = [
-  {
-    title: "E-commerce Mobile App Prototype",
-    description: "A modern e-commerce mobile application prototype built with React Native. This prototype demonstrates smooth animations, intuitive navigation, and a seamless checkout process. The design focuses on maximizing user engagement and conversion rates through carefully crafted user flows and micro-interactions.",
-    // Replace this with your actual YouTube video ID
-    videoId: "dQw4w9WgXcQ"
-  },
-  {
-    title: "Healthcare Dashboard Prototype",
-    description: "An innovative healthcare dashboard designed for medical professionals. This prototype showcases real-time patient monitoring, data visualization, and emergency alert systems. The interface is optimized for quick access to critical information while maintaining HIPAA compliance standards.",
-    // Replace this with your actual YouTube video ID
-    videoId: "dQw4w9WgXcQ"
-  }
-];
+import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn, fadeInUp, staggerContainer } from "@/app/utils/animations";
+import { prototypeData } from "@/app/assets/assets";
 
 export function Prototypes() {
   return (
@@ -67,12 +42,8 @@ export function Prototypes() {
         className="grid grid-cols-1 md:grid-cols-2 gap-8"
       >
         {prototypeData.map((prototype, index) => (
-          <motion.div
-            key={index}
-            variants={fadeInUp}
-            className="group h-full"
-          >
-            <motion.div 
+          <motion.div key={index} variants={fadeInUp} className="group h-full">
+            <motion.div
               className="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-lg h-full flex flex-col transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
               whileHover={{ y: -5 }}
               whileTap={{ scale: 0.98 }}
@@ -87,7 +58,7 @@ export function Prototypes() {
                   allowFullScreen
                 ></iframe>
               </div>
-              <motion.div 
+              <motion.div
                 className="p-6 md:p-8 flex-1 flex flex-col"
                 initial={{ opacity: 0.8 }}
                 whileHover={{ opacity: 1 }}
@@ -105,4 +76,4 @@ export function Prototypes() {
       </motion.div>
     </motion.section>
   );
-} 
+}

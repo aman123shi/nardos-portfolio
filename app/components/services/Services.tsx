@@ -1,4 +1,4 @@
-import { assets, serviceData } from "@/app/assets/assets";
+import { serviceData } from "@/app/assets/assets";
 import Image from "next/image";
 import React from "react";
 
@@ -12,8 +12,8 @@ export function Services({ isDarkMode }: { isDarkMode: boolean }) {
         Ababa, Ethiopia with more than 3 years of professional experience in the
         field. I offer a wide range of services to help you achieve your goals.{" "}
       </p>
-      <div className="grid grid-cols-auto gap-6 my-10">
-        {serviceData.map(({ description, icon, link, title }, index) => (
+      <div className="grid grid-cols-auto gap-6 my-10 ">
+        {serviceData.map(({ description, icon, title }, index) => (
           <div
             key={index}
             className="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white"
@@ -25,10 +25,10 @@ export function Services({ isDarkMode }: { isDarkMode: boolean }) {
             <p className="text-sm text-gray-600 leading-5 dark:text-white/80">
               {description}
             </p>
-            <a href={link} className="flex items-center gap-2 text-sm mt-5">
+            {/* <a href={link} className="flex items-center gap-2 text-sm mt-5">
               Read more{" "}
               <Image src={assets.right_arrow} alt="" className="w-4" />
-            </a>
+            </a> */}
           </div>
         ))}
       </div>

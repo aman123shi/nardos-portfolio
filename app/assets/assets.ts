@@ -51,6 +51,7 @@ import illustration from "./illustration.png";
 import ui_ux from "./ui-ux.png";
 import data_encoding from "./data-encoding.png";
 import ai from "./ai.png";
+import video_editing from "./video-editing.png";
 
 export const assets = {
   instagram_icon,
@@ -67,6 +68,7 @@ export const assets = {
   ui_ux,
   data_encoding,
   ai,
+  video_editing,
   //
   user_image,
   code_icon,
@@ -110,31 +112,35 @@ export const assets = {
 export const workData = [
   {
     title: "Frontend project",
-    description: "A simple frontend project with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
+    description:
+      "A simple frontend project with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
     bgImage: "/work-1.png",
     images: ["/work-1.png", "/work-2.png", "/work-3.png"],
-    link: "https://example.com/frontend-project"
+    link: "https://example.com/frontend-project",
   },
   {
     title: "Geo based app",
-    description: "A mobile app for a geo based service with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
+    description:
+      "A mobile app for a geo based service with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
     bgImage: "/work-2.png",
     images: ["/work-2.png", "/work-3.png", "/work-4.png"],
-    link: "https://example.com/geo-app"
+    link: "https://example.com/geo-app",
   },
   {
     title: "Photography site",
-    description: "A photography site for a photographer with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
+    description:
+      "A photography site for a photographer with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
     bgImage: "/work-3.png",
     images: ["/work-3.png", "/work-4.png", "/work-1.png"],
-    link: "https://example.com/photography"
+    link: "https://example.com/photography",
   },
   {
     title: "UI/UX designing",
-    description: "A UI/UX design for a mobile app with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
+    description:
+      "A UI/UX design for a mobile app with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
     bgImage: "/work-4.png",
     images: ["/work-4.png", "/work-1.png", "/work-2.png"],
-    link: "https://example.com/uiux-design"
+    link: "https://example.com/uiux-design",
   },
 ];
 
@@ -167,6 +173,14 @@ export const serviceData = [
       "Efficiently organizing data from different sources and inserting it into your system.",
     link: "",
   },
+
+  {
+    icon: assets.video_editing,
+    title: "Video Editing",
+    description:
+      "Professional video editing services to enhance your video content.",
+    link: "",
+  },
 ];
 
 export const infoList = [
@@ -196,4 +210,38 @@ export const toolsData = [
   assets.ai,
   assets.photoshop_icon,
   assets.capcut_icon,
+];
+
+interface PrototypeData {
+  title: string;
+  description: string;
+  videoId: string;
+}
+export const prototypeData: PrototypeData[] = [
+  {
+    title: "Perfume Shop Mobile App Prototype",
+    description:
+      " A sleek and modern mobile app prototype for a perfume shop. This design features an intuitive user interface with easy navigation, product categories, and a seamless checkout process. The prototype includes interactive elements to enhance user experience, such as product previews and a wishlist feature.",
+    videoId: "WvV0Ak6aZcA",
+  },
+  {
+    title: "Smart Watch UI Design Prototype",
+    description:
+      "A sleek and modern smartwatch UI design prototype that showcases a user-friendly interface with intuitive navigation. This design features customizable watch faces, health tracking widgets, and quick access to notifications. The prototype includes interactive elements to demonstrate the watch's functionality, such as gesture controls and app shortcuts.",
+    videoId: "wCgGQWci2kQ",
+  },
+
+  {
+    title: "Music App Leaderboard Prototype",
+    description:
+      "A dynamic and engaging music app leaderboard prototype that showcases user rankings, achievements, and social interactions. This design features a visually appealing interface with real-time updates on user performance, song statistics, and personalized playlists. The prototype includes interactive elements to enhance user engagement, such as sharing achievements and competing with friends.",
+    videoId: "PVYEB8HvVR0",
+  },
+
+  {
+    title: "Juice Cafe Website Prototype",
+    description:
+      "A vibrant and refreshing juice cafe website prototype that captures the essence of healthy living. This design features a visually appealing layout with colorful images of fresh juices, smoothies, and healthy snacks. The prototype includes interactive elements such as a menu section, online ordering system, and customer reviews to enhance user experience.",
+    videoId: "a8iIMFTQD-s",
+  },
 ];
