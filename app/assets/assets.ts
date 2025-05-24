@@ -5,11 +5,7 @@ import edu_icon from "./edu-icon.png";
 import edu_icon_dark from "./edu-icon-dark.png";
 import project_icon from "./project-icon.png";
 import project_icon_dark from "./project-icon-dark.png";
-import vscode from "./vscode.png";
-import firebase from "./firebase.png";
 import figma from "./figma.png";
-import git from "./git.png";
-import mongodb from "./mongodb.png";
 import right_arrow_white from "./right-arrow-white.png";
 import logo from "./logo.png";
 import logo_dark from "./logo_dark.png";
@@ -27,9 +23,6 @@ import menu_black from "./menu-black.png";
 import menu_white from "./menu-white.png";
 import close_black from "./close-black.png";
 import close_white from "./close-white.png";
-import web_icon from "./web-icon.png";
-import mobile_icon from "./mobile-icon.png";
-import ui_icon from "./ui-icon.png";
 import graphics_icon from "./graphics-icon.png";
 import right_arrow from "./right-arrow.png";
 import send_icon from "./send-icon.png";
@@ -44,7 +37,6 @@ import youtube_icon from "./youtube.png";
 
 import canva_icon from "./canva-icon.png";
 import photoshop_icon from "./photoshop.png";
-import xd_icon from "./xd.png";
 import capcut_icon from "./capcut-icon.png";
 import tutor from "./tutor.png";
 import illustration from "./illustration.png";
@@ -52,6 +44,10 @@ import ui_ux from "./ui-ux.png";
 import data_encoding from "./data-encoding.png";
 import ai from "./ai.png";
 import video_editing from "./video-editing.png";
+
+import jbl1 from "./public/jbl1.png";
+import jbl2 from "./public/jbl2.png";
+import jbl3 from "./public/jbl3.png";
 
 export const assets = {
   instagram_icon,
@@ -61,7 +57,6 @@ export const assets = {
   youtube_icon,
   canva_icon,
   photoshop_icon,
-  xd_icon,
   capcut_icon,
   tutor,
   illustration,
@@ -77,11 +72,7 @@ export const assets = {
   edu_icon_dark,
   project_icon,
   project_icon_dark,
-  vscode,
-  firebase,
   figma,
-  git,
-  mongodb,
   right_arrow_white,
   logo,
   logo_dark,
@@ -99,9 +90,7 @@ export const assets = {
   menu_white,
   close_black,
   close_white,
-  web_icon,
-  mobile_icon,
-  ui_icon,
+
   graphics_icon,
   right_arrow,
   send_icon,
@@ -111,11 +100,11 @@ export const assets = {
 
 export const workData = [
   {
-    title: "Frontend project",
+    title: "JBL Headphones Landing Page",
     description:
-      "A simple frontend project with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
-    bgImage: "/work-1.png",
-    images: ["/work-1.png", "/work-2.png", "/work-3.png"],
+      "A landing page for JBL headphones with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
+    bgImage: jbl1,
+    images: [jbl1, jbl2, jbl3],
     link: "https://example.com/frontend-project",
   },
   {

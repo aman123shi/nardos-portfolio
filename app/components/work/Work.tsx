@@ -1,14 +1,14 @@
 import { assets, workData } from "@/app/assets/assets";
 import Image from "next/image";
 import React from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Prototypes } from "../prototypes/Prototypes";
-import { motion } from 'framer-motion';
-import { fadeIn, fadeInUp, staggerContainer } from '@/app/utils/animations';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { motion } from "framer-motion";
+import { fadeIn, fadeInUp, staggerContainer } from "@/app/utils/animations";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export function Work({ isDarkMode }: { isDarkMode: boolean }) {
   return (
@@ -28,25 +28,25 @@ export function Work({ isDarkMode }: { isDarkMode: boolean }) {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto"
         >
-          <motion.h4 
-            variants={fadeInUp} 
+          <motion.h4
+            variants={fadeInUp}
             className="mb-3 text-lg font-medium text-gray-600 dark:text-gray-400"
           >
             What I have worked
           </motion.h4>
-          <motion.h2 
-            variants={fadeInUp} 
+          <motion.h2
+            variants={fadeInUp}
             className="text-4xl md:text-5xl font-playfair mb-6 leading-tight text-gray-900 dark:text-white"
           >
             My works
           </motion.h2>
-          <motion.p 
-            variants={fadeInUp} 
+          <motion.p
+            variants={fadeInUp}
             className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
           >
             i have worked in so many places what should i do next what about the
-            african commision what about the central african cases on the platform
-            and the continent
+            african commision what about the central african cases on the
+            platform and the continent
           </motion.p>
         </motion.div>
 
@@ -82,7 +82,7 @@ export function Work({ isDarkMode }: { isDarkMode: boolean }) {
                           src={image}
                           alt={`${project.title} image ${imgIndex + 1}`}
                           fill
-                          className="object-cover"
+                          className="object-cover object-center translate-y-2"
                         />
                       </SwiperSlide>
                     ))}
@@ -99,7 +99,7 @@ export function Work({ isDarkMode }: { isDarkMode: boolean }) {
                   <p className="text-gray-600 dark:text-gray-300 mb-6 flex-1 transform transition-transform group-hover:translate-x-1">
                     {project.description}
                   </p>
-                  <motion.a
+                  {/* <motion.a
                     href={project.link}
                     className="inline-flex items-center gap-2 text-gray-900 dark:text-white hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium"
                     whileHover={{ x: 5 }}
@@ -107,7 +107,7 @@ export function Work({ isDarkMode }: { isDarkMode: boolean }) {
                   >
                     View Project
                     <Image src={isDarkMode ? assets.send_icon : assets.send_icon} alt="send icon" className="w-5" />
-                  </motion.a>
+                  </motion.a> */}
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -125,7 +125,11 @@ export function Work({ isDarkMode }: { isDarkMode: boolean }) {
         >
           Show more{" "}
           <Image
-            src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold}
+            src={
+              isDarkMode
+                ? assets.right_arrow_bold_dark
+                : assets.right_arrow_bold
+            }
             alt="Right arrow"
             className="w-4"
           />
