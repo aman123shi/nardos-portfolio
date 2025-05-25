@@ -45,9 +45,25 @@ import data_encoding from "./data-encoding.png";
 import ai from "./ai.png";
 import video_editing from "./video-editing.png";
 
+// my works images
 import jbl1 from "./public/jbl1.png";
 import jbl2 from "./public/jbl2.png";
 import jbl3 from "./public/jbl3.png";
+
+import error1 from "./public/error1.png";
+import error2 from "./public/error2.png";
+import error3 from "./public/error3.png";
+import error4 from "./public/error4.png";
+import error5 from "./public/error5.png";
+import error6 from "./public/error6.png";
+
+import dashboard1 from "./public/dashboard1.png";
+import dashboard2 from "./public/dashboard2.png";
+
+import book1 from "./public/book1.png";
+import book2 from "./public/book2.png";
+import book3 from "./public/book3.png";
+import book4 from "./public/book4.png";
 
 export const assets = {
   instagram_icon,
@@ -108,27 +124,27 @@ export const workData = [
     link: "https://example.com/frontend-project",
   },
   {
-    title: "Geo based app",
+    title: "Error 404 Page Design",
     description:
-      "A mobile app for a geo based service with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
-    bgImage: "/work-2.png",
-    images: ["/work-2.png", "/work-3.png", "/work-4.png"],
+      "This 404 Error Page UI Design in Figma features a clear error message and a friendly graphic to reduce frustration. It includes a navigation link or search bar for easy navigation, ensuring a seamless user experience. Fully responsive, the design adapts smoothly across phone and desktop devices.",
+    bgImage: error6,
+    images: [error6, error1, error2, error3, error4, error5],
     link: "https://example.com/geo-app",
   },
   {
-    title: "Photography site",
+    title: "Analytical Dashboard UI Design",
     description:
-      "A photography site for a photographer with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
-    bgImage: "/work-3.png",
-    images: ["/work-3.png", "/work-4.png", "/work-1.png"],
+      "This Analytical Dashboard UI Design in Figma offers a clean, modern interface for tracking key metrics. It features organized sections for performance data, interactive elements, and dynamic graphs. Fully responsive, the design ensures a seamless experience across devices, with real-time updates and smooth transitions for efficient data analysis.",
+    bgImage: dashboard1,
+    images: [dashboard1, dashboard2],
     link: "https://example.com/photography",
   },
   {
-    title: "UI/UX designing",
+    title: "Book Cover Design",
     description:
-      "A UI/UX design for a mobile app with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
-    bgImage: "/work-4.png",
-    images: ["/work-4.png", "/work-1.png", "/work-2.png"],
+      "This book cover design, created in Adobe Photoshop, features a visually striking layout with a carefully chosen color palette, typography, and high-quality imagery. Thoughtful composition and creative effects, such as blending modes and lighting adjustments, enhance its appeal. The use of layers and smart objects ensures flexibility, making the design both professional and marketable.",
+    bgImage: book1,
+    images: [book1, book2, book3, book4],
     link: "https://example.com/uiux-design",
   },
 ];
