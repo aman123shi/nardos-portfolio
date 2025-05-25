@@ -87,6 +87,17 @@ import le3 from "./public/le3.png";
 import fun1 from "./public/fun1.png";
 import fun2 from "./public/fun2.png";
 
+import ba1 from "./public/ba1.png";
+
+import so1 from "./public/so1.png";
+import so2 from "./public/so2.png";
+import so3 from "./public/so3.png";
+
+import logo1 from "./public/logo1.png";
+import logo2 from "./public/logo2.png";
+import logo3 from "./public/logo3.png";
+import logo4 from "./public/logo4.png";
+
 export const assets = {
   instagram_icon,
   linkedin_icon,
@@ -225,8 +236,24 @@ export const workData = [
     title: "Banners",
     description:
       "Bold Banners that Get Noticed.From online ads to event displays, our banner designs are crafted to capture attention and deliver your message with impact",
-    bgImage: le1,
-    images: [le1, le2, le3],
+    bgImage: ba1,
+    images: [ba1],
+    link: "https://example.com/photography",
+  },
+  {
+    title: "Social media posts",
+    description:
+      "My social media showcases the latest in modern design, smart technology, and exclusive offers. From sleek product launches to exciting discounts, each post is crafted to inspire and inform. Stay tuned and elevate your lifestyle with every update",
+    bgImage: so2,
+    images: [so2, so3, so1],
+    link: "https://example.com/photography",
+  },
+  {
+    title: "Logos",
+    description:
+      "Your Brand, Your Identity.Every great story starts with a powerful logo. Discover clean, memorable designs that define who you are and what you stand for.",
+    bgImage: logo1,
+    images: [logo1, logo2, logo3, logo4],
     link: "https://example.com/photography",
   },
 ];
