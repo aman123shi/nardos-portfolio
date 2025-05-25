@@ -65,6 +65,28 @@ import book2 from "./public/book2.png";
 import book3 from "./public/book3.png";
 import book4 from "./public/book4.png";
 
+import ju1 from "./public/ju1.png";
+import ju2 from "./public/ju2.png";
+import ju3 from "./public/ju3.png";
+import ju4 from "./public/ju4.png";
+
+import per1 from "./public/per1.png";
+import per2 from "./public/per2.png";
+import per3 from "./public/per3.png";
+
+import mu1 from "./public/mu1.png";
+import mu2 from "./public/mu2.png";
+import mu3 from "./public/mu3.png";
+
+import web from "./public/web.png";
+
+import le1 from "./public/le1.png";
+import le2 from "./public/le2.png";
+import le3 from "./public/le3.png";
+
+import fun1 from "./public/fun1.png";
+import fun2 from "./public/fun2.png";
+
 export const assets = {
   instagram_icon,
   linkedin_icon,
@@ -146,6 +168,66 @@ export const workData = [
     bgImage: book1,
     images: [book1, book2, book3, book4],
     link: "https://example.com/uiux-design",
+  },
+
+  {
+    title: "Juice House Website",
+    description:
+      "This Juice House Website Prototype in Figma features a vibrant, user-friendly design with high-quality imagery and smooth interactions. It includes a hero section, menu display, testimonials, and easy ordering options. The interactive prototype ensures seamless navigation with responsive design for both desktop and mobile, modern interface for tracking key metrics. It features organized sections for performance data, interactive elements, and dynamic graphs. Fully responsive, the design ensures a seamless experience across devices, with real-time updates and smooth transitions for efficient data analysis.",
+    bgImage: ju1,
+    images: [ju1, ju2, ju3, ju4],
+    link: "https://example.com/photography",
+  },
+  {
+    title: "perfume app",
+    description:
+      "This perfume app UI design is crafted to offer users a luxurious and seamless shopping experience. The design emphasizes elegance with a clean, modern layout, soft color palettes, and high-quality visuals. Users can easily browse through a curated collection of perfumes, discover detailed scent profiles, and make purchases with minimal effort. Special features include personalized recommendations, scent quizzes, and a smooth checkout process. The intuitive navigation and refined aesthetic aim to capture the sophistication and beauty associated with the world of fragrances.",
+    bgImage: per1,
+    images: [per1, per2, per3],
+    link: "https://example.com/photography",
+  },
+  //nardi
+  {
+    title: "Crowdfunding Website",
+    description:
+      "Crowdfunding Website Homepage Design This is a homepage concept I designed for a humanitarian crowdfunding website. The goal was to create an emotionally engaging and visually clear layout that encourages users to take action — whether it’s starting a campaign or supporting a cause.",
+    bgImage: fun1,
+    images: [fun1, fun2],
+    link: "https://example.com/photography",
+  },
+  {
+    title: "Music Player UI Design",
+    description:
+      "This Music Player UI Design in Figma features a modern, minimalist layout with vibrant and dark mode options. It includes custom playback controls, a playlist section, and animated equalizer and sound wave visualizations. The design is fully responsive, ensuring a seamless experience across devices, with smooth transitions and micro-interactions for enhanced user engagement.",
+    bgImage: mu1,
+    images: [mu1, mu2, mu3],
+    link: "https://example.com/photography",
+  },
+
+  {
+    title: "watch e-commerce UI design",
+    description:
+      "This watch e-commerce UI design showcases a modern, elegant interface tailored for selling premium timepieces. With a clean layout, refined typography, and a sleek color palette, the design emphasizes luxury and product detail. Key features include a featured product showcase, intuitive filtering, detailed product pages, and a smooth checkout flow — all fully responsive for seamless user experience across devices.",
+    bgImage: web,
+    images: [web],
+    link: "https://example.com/photography",
+  },
+  {
+    title: "Music app leaderboard UI design",
+    description:
+      "A leaderboard UI design displays a ranked list of users or players based on their performance, scores, or achievements. It typically includes user names, ranks, profile pictures, and score metrics. A clean and intuitive layout, clear hierarchy, and visual indicators (like badges or trophies) help users quickly understand standings and motivate engagement.",
+    bgImage: le1,
+    images: [le1, le2, le3],
+    link: "https://example.com/photography",
+  },
+
+  {
+    title: "Banners",
+    description:
+      "Bold Banners that Get Noticed.From online ads to event displays, our banner designs are crafted to capture attention and deliver your message with impact",
+    bgImage: le1,
+    images: [le1, le2, le3],
+    link: "https://example.com/photography",
   },
 ];
 
