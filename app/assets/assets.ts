@@ -208,6 +208,18 @@ interface PrototypeData {
 }
 export const prototypeData: PrototypeData[] = [
   {
+    title: "Smart Watches E-commerce App Prototype",
+    description:
+      "A sleek and modern e-commerce app prototype for smart watches. This design features an intuitive user interface with easy navigation, product categories, and a seamless checkout process. The prototype includes interactive elements to enhance user experience, such as product previews, reviews, and a wishlist feature.",
+    videoId: "La1fXOHYgHY",
+  },
+  {
+    title: "Juice Cafe Website Prototype",
+    description:
+      "A vibrant and refreshing juice cafe website prototype that captures the essence of healthy living. This design features a visually appealing layout with colorful images of fresh juices, smoothies, and healthy snacks. The prototype includes interactive elements such as a menu section, online ordering system, and customer reviews to enhance user experience.",
+    videoId: "a8iIMFTQD-s",
+  },
+  {
     title: "Perfume Shop Mobile App Prototype",
     description:
       " A sleek and modern mobile app prototype for a perfume shop. This design features an intuitive user interface with easy navigation, product categories, and a seamless checkout process. The prototype includes interactive elements to enhance user experience, such as product previews and a wishlist feature.",
@@ -221,19 +233,6 @@ export const prototypeData: PrototypeData[] = [
   },
 
   {
-    title: "Music App Leaderboard Prototype",
-    description:
-      "A dynamic and engaging music app leaderboard prototype that showcases user rankings, achievements, and social interactions. This design features a visually appealing interface with real-time updates on user performance, song statistics, and personalized playlists. The prototype includes interactive elements to enhance user engagement, such as sharing achievements and competing with friends.",
-    videoId: "PVYEB8HvVR0",
-  },
-
-  {
-    title: "Juice Cafe Website Prototype",
-    description:
-      "A vibrant and refreshing juice cafe website prototype that captures the essence of healthy living. This design features a visually appealing layout with colorful images of fresh juices, smoothies, and healthy snacks. The prototype includes interactive elements such as a menu section, online ordering system, and customer reviews to enhance user experience.",
-    videoId: "a8iIMFTQD-s",
-  },
-  {
     title: "TV Movie App Prototype",
     description:
       "A Modern TV movie app prototype that offers a seamless user experience for discovering and watching movies. This design features an intuitive interface with easy navigation, personalized recommendations, and a comprehensive movie database. The prototype includes interactive elements such as trailers, reviews, and watchlists to enhance user engagement.",
@@ -241,9 +240,9 @@ export const prototypeData: PrototypeData[] = [
   },
 
   {
-    title: "Smart Watches E-commerce App Prototype",
+    title: "Leaderboard Prototype",
     description:
-      "A sleek and modern e-commerce app prototype for smart watches. This design features an intuitive user interface with easy navigation, product categories, and a seamless checkout process. The prototype includes interactive elements to enhance user experience, such as product previews, reviews, and a wishlist feature.",
-    videoId: "La1fXOHYgHY",
+      "A dynamic and engaging music app leaderboard prototype that showcases user rankings, achievements, and social interactions. This design features a visually appealing interface with real-time updates on user performance, song statistics, and personalized playlists. The prototype includes interactive elements to enhance user engagement, such as sharing achievements and competing with friends.",
+    videoId: "PVYEB8HvVR0",
   },
 ];
