@@ -51,11 +51,10 @@ import jbl2 from "./public/jbl2.png";
 import jbl3 from "./public/jbl3.png";
 
 import error1 from "./public/error1.png";
-import error2 from "./public/error2.png";
+import error6 from "./public/error6.png";
 import error3 from "./public/error3.png";
 import error4 from "./public/error4.png";
 import error5 from "./public/error5.png";
-import error6 from "./public/error6.png";
 
 import dashboard1 from "./public/dashboard1.png";
 import dashboard2 from "./public/dashboard2.png";
@@ -83,6 +82,7 @@ import web from "./public/web.png";
 import le1 from "./public/le1.png";
 import le2 from "./public/le2.png";
 import le3 from "./public/le3.png";
+import le4 from "./public/le4.png";
 
 import fun1 from "./public/fun1.png";
 import fun2 from "./public/fun2.png";
@@ -161,7 +161,7 @@ export const workData = [
     description:
       "This 404 Error Page UI Design in Figma features a clear error message and a friendly graphic to reduce frustration. It includes a navigation link or search bar for easy navigation, ensuring a seamless user experience. Fully responsive, the design adapts smoothly across phone and desktop devices.",
     bgImage: error6,
-    images: [error6, error1, error2, error3, error4, error5],
+    images: [error6, error1, error3, error4, error5],
     link: "https://example.com/geo-app",
   },
   {
@@ -228,7 +228,7 @@ export const workData = [
     description:
       "A leaderboard UI design displays a ranked list of users or players based on their performance, scores, or achievements. It typically includes user names, ranks, profile pictures, and score metrics. A clean and intuitive layout, clear hierarchy, and visual indicators (like badges or trophies) help users quickly understand standings and motivate engagement.",
     bgImage: le1,
-    images: [le1, le2, le3],
+    images: [le1, le2, le3, le4],
     link: "https://example.com/photography",
   },
 
