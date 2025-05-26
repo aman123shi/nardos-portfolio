@@ -102,21 +102,19 @@ export function Work({ isDarkMode }: { isDarkMode: boolean }) {
             variants={fadeInUp}
             className="mb-3 text-lg font-medium text-gray-600 dark:text-gray-400"
           >
-            What I have worked
+            Featured Projects
           </motion.h4>
           <motion.h2
             variants={fadeInUp}
             className="text-4xl md:text-5xl font-playfair mb-6 leading-tight text-gray-900 dark:text-white"
           >
-            My works
+            Ethiopian-Inspired Design Portfolio
           </motion.h2>
           <motion.p
             variants={fadeInUp}
             className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
           >
-            i have worked in so many places what should i do next what about the
-            african commision what about the central african cases on the
-            platform and the continent
+            Explore my collection of modern UI/UX and graphic design projects, blending contemporary design principles with Ethiopian cultural elements. From mobile apps to brand identities, each project showcases the unique perspective of Ethiopian design in the digital age.
           </motion.p>
         </motion.div>
 
