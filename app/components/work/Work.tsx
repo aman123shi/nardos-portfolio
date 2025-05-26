@@ -1,19 +1,45 @@
 import { assets, workData } from "@/app/assets/assets";
 import Image from "next/image";
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Prototypes } from "../prototypes/Prototypes";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { fadeIn, fadeInUp, staggerContainer } from "@/app/utils/animations";
+import { ImagePreviewModal } from "./ImagePreviewModal";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+const ITEMS_PER_PAGE = 6;
+
 export function Work({ isDarkMode }: { isDarkMode: boolean }) {
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
+  const [showAll, setShowAll] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  const visibleProjects = showAll ? workData : workData.slice(0, ITEMS_PER_PAGE);
+  const hasMoreProjects = workData.length > ITEMS_PER_PAGE;
+
+  const handleToggleShow = () => {
+    // Only maintain scroll position when showing less
+    if (showAll) {
+      const section = sectionRef.current;
+      if (section) {
+        const sectionTop = section.offsetTop;
+        window.scrollTo({
+          top: sectionTop,
+          behavior: 'instant'
+        });
+      }
+    }
+    setShowAll(!showAll);
+  };
+
   return (
     <>
       <motion.div
+        ref={sectionRef}
         variants={fadeIn}
         initial="hidden"
         whileInView="visible"
@@ -57,85 +83,126 @@ export function Work({ isDarkMode }: { isDarkMode: boolean }) {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16"
         >
-          {workData.map((project, index) => (
-            <motion.div
-              key={index}
-              variants={fadeInUp}
-              className="group h-full"
-            >
+          <AnimatePresence>
+            {visibleProjects.map((project, index) => (
               <motion.div
-                className="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-lg h-full flex flex-col transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
-                whileHover={{ y: -5 }}
-                whileTap={{ scale: 0.98 }}
+                key={project.title}
+                variants={fadeInUp}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group h-full"
               >
-                <div className="aspect-[16/10] relative">
-                  <Swiper
-                    modules={[Navigation, Pagination, Autoplay]}
-                    navigation
-                    pagination={{ clickable: true }}
-                    autoplay={{ delay: 3000 }}
-                    className="h-full w-full"
-                  >
-                    {project.images?.map((image, imgIndex) => (
-                      <SwiperSlide key={imgIndex}>
-                        <Image
-                          src={image}
-                          alt={`${project.title} image ${imgIndex + 1}`}
-                          fill
-                          className="object-cover object-center translate-y-2"
-                        />
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
-                </div>
                 <motion.div
-                  className="p-6 md:p-8 flex-1 flex flex-col"
-                  initial={{ opacity: 0.8 }}
-                  whileHover={{ opacity: 1 }}
+                  className="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-lg h-full flex flex-col transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
+                  whileHover={{ y: -5 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  <h3 className="text-xl md:text-2xl font-playfair mb-4 transform transition-transform group-hover:translate-x-1 text-gray-900 dark:text-white">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-6 flex-1 transform transition-transform group-hover:translate-x-1">
-                    {project.description}
-                  </p>
-                  {/* <motion.a
-                    href={project.link}
-                    className="inline-flex items-center gap-2 text-gray-900 dark:text-white hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium"
-                    whileHover={{ x: 5 }}
-                    whileTap={{ scale: 0.95 }}
+                  <div className="aspect-[16/10] relative">
+                    <Swiper
+                      modules={[Navigation, Pagination, Autoplay]}
+                      navigation
+                      pagination={{ clickable: true }}
+                      autoplay={{ delay: 3000 }}
+                      className="h-full w-full"
+                    >
+                      {project.images?.map((image, imgIndex) => (
+                        <SwiperSlide key={imgIndex}>
+                          <div 
+                            className="relative w-full h-full group cursor-pointer"
+                            onClick={() => {
+                              if (typeof image === 'string') {
+                                setPreviewImage(image);
+                              } else if ('src' in image) {
+                                setPreviewImage(image.src);
+                              }
+                            }}
+                          >
+                            <Image
+                              src={image}
+                              alt={`${project.title} image ${imgIndex + 1}`}
+                              fill
+                              className="object-cover object-center translate-y-2 transition-opacity duration-300 group-hover:opacity-80"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <div className="bg-black bg-opacity-50 p-3 rounded-full">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="h-6 w-6 text-white"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                                  />
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
+                  </div>
+                  <motion.div
+                    className="p-6 md:p-8 flex-1 flex flex-col"
+                    initial={{ opacity: 0.8 }}
+                    whileHover={{ opacity: 1 }}
                   >
-                    View Project
-                    <Image src={isDarkMode ? assets.send_icon : assets.send_icon} alt="send icon" className="w-5" />
-                  </motion.a> */}
+                    <h3 className="text-xl md:text-2xl font-playfair mb-4 transform transition-transform group-hover:translate-x-1 text-gray-900 dark:text-white">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 mb-6 flex-1 transform transition-transform group-hover:translate-x-1">
+                      {project.description}
+                    </p>
+                  </motion.div>
                 </motion.div>
               </motion.div>
-            </motion.div>
-          ))}
+            ))}
+          </AnimatePresence>
         </motion.div>
 
-        <motion.a
-          href=""
-          variants={fadeInUp}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="w-max flex items-center justify-center gap-2
-          text-gray-900 dark:text-white border-[0.5px] border-gray-300 dark:border-gray-700 rounded-full py-3 px-10 mx-auto
-          mt-16 hover:bg-gray-50 dark:hover:bg-darkHover transition-all duration-300 font-medium"
-        >
-          Show more{" "}
-          <Image
-            src={
-              isDarkMode
-                ? assets.right_arrow_bold_dark
-                : assets.right_arrow_bold
-            }
-            alt="Right arrow"
-            className="w-4"
-          />
-        </motion.a>
+        {hasMoreProjects && (
+          <motion.button
+            onClick={handleToggleShow}
+            variants={fadeInUp}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="w-max flex items-center justify-center gap-2
+            text-gray-900 dark:text-white border-[0.5px] border-gray-300 dark:border-gray-700 rounded-full py-3 px-10 mx-auto
+            mt-16 hover:bg-gray-50 dark:hover:bg-darkHover transition-all duration-300 font-medium"
+          >
+            {showAll ? "Show less" : "Show more"}{" "}
+            <Image
+              src={
+                isDarkMode
+                  ? assets.right_arrow_bold_dark
+                  : assets.right_arrow_bold
+              }
+              alt="Right arrow"
+              className={`w-4 transition-transform duration-300 ${
+                showAll ? "rotate-180" : ""
+              }`}
+            />
+          </motion.button>
+        )}
       </motion.div>
-      <Prototypes />
+      <ImagePreviewModal
+        isOpen={!!previewImage}
+        onClose={() => setPreviewImage(null)}
+        imageSrc={previewImage || ''}
+      />
+      <Prototypes isDarkMode={isDarkMode} />
     </>
   );
 }

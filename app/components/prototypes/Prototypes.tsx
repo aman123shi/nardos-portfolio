@@ -1,11 +1,36 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { fadeIn, fadeInUp, staggerContainer } from "@/app/utils/animations";
 import { prototypeData } from "@/app/assets/assets";
+import Image from "next/image";
+import { assets } from "@/app/assets/assets";
 
-export function Prototypes() {
+const ITEMS_PER_PAGE = 6;
+
+export function Prototypes({ isDarkMode }: { isDarkMode: boolean }) {
+  const [showAll, setShowAll] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+  const visiblePrototypes = showAll ? prototypeData : prototypeData.slice(0, ITEMS_PER_PAGE);
+  const hasMorePrototypes = prototypeData.length > ITEMS_PER_PAGE;
+
+  const handleToggleShow = () => {
+    // Only maintain scroll position when showing less
+    if (showAll) {
+      const section = sectionRef.current;
+      if (section) {
+        const sectionTop = section.offsetTop;
+        window.scrollTo({
+          top: sectionTop,
+          behavior: 'instant'
+        });
+      }
+    }
+    setShowAll(!showAll);
+  };
+
   return (
     <motion.section
+      ref={sectionRef}
       variants={fadeIn}
       initial="hidden"
       whileInView="visible"
@@ -38,42 +63,66 @@ export function Prototypes() {
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true }}
         className="grid grid-cols-1 md:grid-cols-2 gap-8"
       >
-        {prototypeData.map((prototype, index) => (
-          <motion.div key={index} variants={fadeInUp} className="group h-full">
+        <AnimatePresence>
+          {visiblePrototypes.map((prototype, index) => (
             <motion.div
-              className="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-lg h-full flex flex-col transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
-              whileHover={{ y: -5 }}
-              whileTap={{ scale: 0.98 }}
+              key={prototype.title}
+              variants={fadeInUp}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white dark:bg-darkTheme rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
             >
-              <div className="aspect-[16/10] relative">
+              <div className="aspect-video relative">
                 <iframe
-                  className="w-full h-full"
                   src={`https://www.youtube.com/embed/${prototype.videoId}`}
                   title={prototype.title}
-                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                ></iframe>
+                  className="absolute inset-0 w-full h-full"
+                />
               </div>
-              <motion.div
-                className="p-6 md:p-8 flex-1 flex flex-col"
-                initial={{ opacity: 0.8 }}
-                whileHover={{ opacity: 1 }}
-              >
-                <h3 className="text-xl md:text-2xl font-playfair mb-4 transform transition-transform group-hover:translate-x-1 text-gray-900 dark:text-white">
+              <div className="p-6">
+                <h3 className="text-xl font-playfair mb-4 text-gray-900 dark:text-white">
                   {prototype.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed transform transition-transform group-hover:translate-x-1">
+                <p className="text-gray-600 dark:text-gray-300">
                   {prototype.description}
                 </p>
-              </motion.div>
+              </div>
             </motion.div>
-          </motion.div>
-        ))}
+          ))}
+        </AnimatePresence>
       </motion.div>
+
+      {hasMorePrototypes && (
+        <motion.button
+          onClick={handleToggleShow}
+          variants={fadeInUp}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="w-max flex items-center justify-center gap-2
+          text-gray-900 dark:text-white border-[0.5px] border-gray-300 dark:border-gray-700 rounded-full py-3 px-10 mx-auto
+          mt-16 hover:bg-gray-50 dark:hover:bg-darkHover transition-all duration-300 font-medium"
+        >
+          {showAll ? "Show less" : "Show more"}{" "}
+          <Image
+            src={
+              isDarkMode
+                ? assets.right_arrow_bold_dark
+                : assets.right_arrow_bold
+            }
+            alt="Right arrow"
+            className={`w-4 transition-transform duration-300 ${
+              showAll ? "rotate-180" : ""
+            }`}
+          />
+        </motion.button>
+      )}
     </motion.section>
   );
 }

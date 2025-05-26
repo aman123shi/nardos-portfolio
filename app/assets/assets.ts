@@ -344,6 +344,15 @@ export const prototypeData: PrototypeData[] = [
       "A vibrant and refreshing juice cafe website prototype that captures the essence of healthy living. This design features a visually appealing layout with colorful images of fresh juices, smoothies, and healthy snacks. The prototype includes interactive elements such as a menu section, online ordering system, and customer reviews to enhance user experience.",
     videoId: "a8iIMFTQD-s",
   },
+  
+
+  {
+    title: "Food Recipe website prototype",
+    description:
+      "A food recipe website prototype that offers a seamless user experience for discovering and cooking delicious recipes. This design features an intuitive interface with easy navigation, personalized recommendations, and a comprehensive recipe database. The prototype includes interactive elements such as recipe search, ingredient tracking, and a user-friendly interface to enhance user engagement.",
+    videoId: "vYG2apz5314",
+  },
+
   {
     title: "Perfume Shop Mobile App Prototype",
     description:
