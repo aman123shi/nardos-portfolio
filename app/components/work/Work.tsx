@@ -15,11 +15,55 @@ const ITEMS_PER_PAGE = 6;
 
 export function Work({ isDarkMode }: { isDarkMode: boolean }) {
   const [previewImage, setPreviewImage] = useState<string | null>(null);
+  const [currentProjectIndex, setCurrentProjectIndex] = useState<number>(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const [showAll, setShowAll] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const visibleProjects = showAll ? workData : workData.slice(0, ITEMS_PER_PAGE);
   const hasMoreProjects = workData.length > ITEMS_PER_PAGE;
+
+  const handleImageClick = (projectIndex: number, imageIndex: number, imageSrc: string) => {
+    setCurrentProjectIndex(projectIndex);
+    setCurrentImageIndex(imageIndex);
+    setPreviewImage(imageSrc);
+  };
+
+  const handlePrevImage = () => {
+    const currentProject = visibleProjects[currentProjectIndex];
+    if (!currentProject?.images) return;
+
+    let newImageIndex = currentImageIndex - 1;
+    if (newImageIndex < 0) {
+      newImageIndex = currentProject.images.length - 1;
+    }
+    
+    const image = currentProject.images[newImageIndex];
+    if (typeof image === 'string') {
+      setPreviewImage(image);
+    } else if ('src' in image) {
+      setPreviewImage(image.src);
+    }
+    setCurrentImageIndex(newImageIndex);
+  };
+
+  const handleNextImage = () => {
+    const currentProject = visibleProjects[currentProjectIndex];
+    if (!currentProject?.images) return;
+
+    let newImageIndex = currentImageIndex + 1;
+    if (newImageIndex >= currentProject.images.length) {
+      newImageIndex = 0;
+    }
+    
+    const image = currentProject.images[newImageIndex];
+    if (typeof image === 'string') {
+      setPreviewImage(image);
+    } else if ('src' in image) {
+      setPreviewImage(image.src);
+    }
+    setCurrentImageIndex(newImageIndex);
+  };
 
   const handleToggleShow = () => {
     // Only maintain scroll position when showing less
@@ -113,9 +157,9 @@ export function Work({ isDarkMode }: { isDarkMode: boolean }) {
                             className="relative w-full h-full group cursor-pointer"
                             onClick={() => {
                               if (typeof image === 'string') {
-                                setPreviewImage(image);
+                                handleImageClick(index, imgIndex, image);
                               } else if ('src' in image) {
-                                setPreviewImage(image.src);
+                                handleImageClick(index, imgIndex, image.src);
                               }
                             }}
                           >
@@ -199,8 +243,16 @@ export function Work({ isDarkMode }: { isDarkMode: boolean }) {
       </motion.div>
       <ImagePreviewModal
         isOpen={!!previewImage}
-        onClose={() => setPreviewImage(null)}
+        onClose={() => {
+          setPreviewImage(null);
+          setCurrentImageIndex(0);
+        }}
         imageSrc={previewImage || ''}
+        onNext={handleNextImage}
+        onPrev={handlePrevImage}
+        hasMultipleImages={
+          visibleProjects[currentProjectIndex]?.images?.length > 1
+        }
       />
       <Prototypes isDarkMode={isDarkMode} />
     </>
