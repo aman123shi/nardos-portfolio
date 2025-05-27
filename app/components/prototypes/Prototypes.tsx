@@ -5,7 +5,7 @@ import { prototypeData } from "@/app/assets/assets";
 import Image from "next/image";
 import { assets } from "@/app/assets/assets";
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 4;
 
 export function Prototypes({ isDarkMode }: { isDarkMode: boolean }) {
   const [showAll, setShowAll] = useState(false);

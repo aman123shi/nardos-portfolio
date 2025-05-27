@@ -108,13 +108,13 @@ export function Work({ isDarkMode }: { isDarkMode: boolean }) {
             variants={fadeInUp}
             className="text-4xl md:text-5xl font-playfair mb-6 leading-tight text-gray-900 dark:text-white"
           >
-            Ethiopian-Inspired Design Portfolio
+            Creative Design Portfolio
           </motion.h2>
           <motion.p
             variants={fadeInUp}
             className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
           >
-            Explore my collection of modern UI/UX and graphic design projects, blending contemporary design principles with Ethiopian cultural elements. From mobile apps to brand identities, each project showcases the unique perspective of Ethiopian design in the digital age.
+            Explore my collection of innovative UI/UX and graphic design projects. From mobile apps to brand identities, each project demonstrates modern design principles and creative solutions for the digital age.
           </motion.p>
         </motion.div>
 

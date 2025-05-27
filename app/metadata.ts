@@ -1,31 +1,31 @@
 export const metadata = {
-  title: "Nardos | Ethiopian UI/UX & Graphics Designer",
-  description: "Professional UI/UX and Graphics Designer from Addis Ababa, Ethiopia with over 3 years of experience. Specializing in modern web design, mobile apps, and brand identity.",
+  title: "Nardos | International UI/UX & Graphics Designer",
+  description: "Creative UI/UX and Graphics Designer with global perspective and over 3 years of experience. Specializing in innovative web design, mobile apps, and cross-cultural digital experiences.",
   keywords: [
-    "Ethiopian UI/UX designer",
-    "Addis Ababa web designer",
-    "Ethiopian graphic designer",
-    "UI/UX design Ethiopia",
-    "Ethiopian digital designer",
-    "East African web design",
-    "Ethiopian brand designer",
-    "Mobile app designer Ethiopia",
-    "Professional designer Addis Ababa",
-    "Ethiopian creative professional",
-    "African UI/UX expert",
-    "Ethiopian tech designer",
+    "International UI/UX designer",
+    "Global web designer",
+    "Professional graphic designer",
+    "UI/UX design expert",
+    "Digital product designer",
+    "Modern web design",
+    "Cross-cultural designer",
+    "Mobile app designer",
+    "Professional UI designer",
+    "Creative professional",
+    "Global UX expert",
+    "International tech designer",
   ],
   openGraph: {
-    title: "Nardos | Ethiopian UI/UX & Graphics Designer",
-    description: "Professional UI/UX and Graphics Designer from Addis Ababa, Ethiopia with over 3 years of experience. Specializing in modern web design, mobile apps, and brand identity.",
+    title: "Nardos | International UI/UX & Graphics Designer",
+    description: "Creative UI/UX and Graphics Designer with global perspective and over 3 years of experience. Specializing in innovative web design, mobile apps, and cross-cultural digital experiences.",
     type: "website",
     locale: "en_US",
     siteName: "Nardos Design Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nardos | Ethiopian UI/UX & Graphics Designer",
-    description: "Professional UI/UX and Graphics Designer from Addis Ababa, Ethiopia with over 3 years of experience. Specializing in modern web design, mobile apps, and brand identity.",
+    title: "Nardos | International UI/UX & Graphics Designer",
+    description: "Creative UI/UX and Graphics Designer with global perspective and over 3 years of experience. Specializing in innovative web design, mobile apps, and cross-cultural digital experiences.",
   },
   alternates: {
     canonical: "https://www.nardosdesign.com", // Replace with your actual domain
@@ -36,7 +36,7 @@ export const structuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Nardos Design",
-  "description": "Professional UI/UX and Graphics Design services in Addis Ababa, Ethiopia",
+  "description": "International UI/UX and Graphics Design services with a global perspective",
   "image": "/path-to-your-logo.png", // Replace with actual path
   "address": {
     "@type": "PostalAddress",
@@ -66,7 +66,7 @@ export const structuredData = {
     "User Interface",
     "User Experience",
     "Digital Design",
-    "Ethiopian Design",
-    "African Design"
+    "Cross-cultural Design",
+    "International Design"
   ]
 }; 

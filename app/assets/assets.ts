@@ -275,11 +275,13 @@ export const serviceData = [
   },
 
   {
-    icon: assets.tutor,
-    title: "Mentorship",
-    description: "Offering one to one mentorship and tutorials for students...",
+    icon: assets.video_editing,
+    title: "Video Editing",
+    description:
+      "Professional video editing services to enhance your video content.",
     link: "",
   },
+
   {
     icon: assets.data_encoding,
     title: "Data Encoding",
@@ -289,12 +291,14 @@ export const serviceData = [
   },
 
   {
-    icon: assets.video_editing,
-    title: "Video Editing",
-    description:
-      "Professional video editing services to enhance your video content.",
+    icon: assets.tutor,
+    title: "Mentorship",
+    description: "Offering one to one mentorship and tutorials for students...",
     link: "",
   },
+ 
+
+ 
 ];
 
 export const infoList = [
