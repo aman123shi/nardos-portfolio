@@ -2,7 +2,13 @@
 
 A modern, responsive portfolio website showcasing the work of Nardos Shibeshi, a UI/UX and Graphics Designer with over 3 years of professional experience. The website is built using Next.js and features a clean, user-friendly design with dark mode support.
 
-🔗 [View Live Website](https://nardos-shibeshi.vercel.app/)
+[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fnardos-shibeshi.vercel.app%2F)](https://nardos-shibeshi.vercel.app/)
+[![Made with Next.js](https://img.shields.io/badge/Made%20with-Next.js-000000?logo=Next.js)](https://nextjs.org/)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?logo=Vercel)](https://nardos-shibeshi.vercel.app/)
+
+🔗 **[View Live Website](https://nardos-shibeshi.vercel.app/)**
+
+[![Website Preview](https://api.microlink.io?url=https%3A%2F%2Fnardos-shibeshi.vercel.app%2F&screenshot=true&meta=false&embed=screenshot.url)](https://nardos-shibeshi.vercel.app/)
 
 ## Features
 
@@ -49,7 +55,7 @@ A modern, responsive portfolio website showcasing the work of Nardos Shibeshi, a
 
 1. Clone the repository
 ```bash
-git clone [repository-url]
+git clone https://github.com/aman123shi/nardos-portfolio
 ```
 
 2. Install dependencies
