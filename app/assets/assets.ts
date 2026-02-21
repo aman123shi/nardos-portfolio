@@ -98,6 +98,19 @@ import logo2 from "./public/logo2.png";
 import logo3 from "./public/logo3.png";
 import logo4 from "./public/logo4.png";
 
+import thumb1 from "./public/thumb1.jpg";
+import thumb2 from "./public/thumb2.jpg";
+import thumb3 from "./public/thumb3.jpg";
+import thumb4 from "./public/thumb4.jpg";
+import thumb5 from "./public/thumb5.jpg";
+
+import banners1 from "./public/banners1.jpg";
+import banners2 from "./public/banners2.jpg";
+
+import tool1 from "./public/tool1.png";
+import tool2 from "./public/tool2.png";
+import tool3 from "./public/tool3.png";
+
 export const assets = {
   instagram_icon,
   linkedin_icon,
@@ -148,6 +161,14 @@ export const assets = {
 };
 
 export const workData = [
+  {
+    title: "YouTube Thumbnails",
+    description:
+      "Eye-catching YouTube thumbnail designs created for various channels. These thumbnails are designed to maximize click-through rates with compelling visuals, clear text, and strategic composition that stands out in search results and recommendations.",
+    bgImage: thumb1,
+    images: [thumb1, thumb2, thumb3, thumb4, thumb5],
+    link: "https://example.com/photography",
+  },
   {
     title: "JBL Headphones Landing Page",
     description:
@@ -256,6 +277,15 @@ export const workData = [
     images: [logo1, logo2, logo3, logo4],
     link: "https://example.com/photography",
   },
+
+  {
+    title: "YouTube Banners",
+    description:
+      "Professional YouTube channel banner designs that create a strong first impression. These banners are crafted to reflect brand identity, communicate channel purpose, and engage viewers with visually appealing layouts optimized for all device sizes.",
+    bgImage: banners1,
+    images: [banners1, banners2],
+    link: "https://example.com/photography",
+  },
 ];
 
 export const serviceData = [
@@ -269,8 +299,9 @@ export const serviceData = [
 
   {
     icon: assets.illustration,
-    title: "Graphics design",
-    description: "Creative design solutions to enhance visual communication...",
+    title: "Social Media Manager",
+    description:
+      "Strategic social media management to enhance your brand presence and engagement...",
     link: "",
   },
 
@@ -296,9 +327,6 @@ export const serviceData = [
     description: "Offering one to one mentorship and tutorials for students...",
     link: "",
   },
- 
-
- 
 ];
 
 export const infoList = [
@@ -306,7 +334,7 @@ export const infoList = [
     icon: assets.hand_icon,
     iconDark: assets.hand_icon,
     title: "Experience",
-    description: "3+ years in UI/UX and Graphics Design",
+    description: "3+ years in UI/UX and Social Media Management",
   },
   {
     icon: assets.edu_icon,
@@ -324,10 +352,13 @@ export const infoList = [
 
 export const toolsData = [
   assets.figma,
+  tool1,
   assets.canva_icon,
   assets.ai,
   assets.photoshop_icon,
+  tool2,
   assets.capcut_icon,
+  tool3,
 ];
 
 interface PrototypeData {
@@ -348,7 +379,6 @@ export const prototypeData: PrototypeData[] = [
       "A vibrant and refreshing juice cafe website prototype that captures the essence of healthy living. This design features a visually appealing layout with colorful images of fresh juices, smoothies, and healthy snacks. The prototype includes interactive elements such as a menu section, online ordering system, and customer reviews to enhance user experience.",
     videoId: "a8iIMFTQD-s",
   },
-  
 
   {
     title: "Food Recipe website prototype",
@@ -382,5 +412,77 @@ export const prototypeData: PrototypeData[] = [
     description:
       "A dynamic and engaging music app leaderboard prototype that showcases user rankings, achievements, and social interactions. This design features a visually appealing interface with real-time updates on user performance, song statistics, and personalized playlists. The prototype includes interactive elements to enhance user engagement, such as sharing achievements and competing with friends.",
     videoId: "PVYEB8HvVR0",
+  },
+];
+
+interface VideoEditingData {
+  title: string;
+  description: string;
+  videoUrl: string;
+}
+
+export const videoEditingData: VideoEditingData[] = [
+  {
+    title: "Wellness Wisdom: Clear & Engaging",
+    description:
+      "Clean and engaging health-focused edit designed to deliver information clearly and effectively.",
+    videoUrl:
+      "https://drive.google.com/file/d/1xjZxuWnaiu4hvtKewcNcSNFtqZxU7tHE/preview",
+  },
+  {
+    title: "Lifestyle Transformation: Educate & Inspire",
+    description:
+      "A professionally edited health video crafted to educate and inspire better lifestyle choices.",
+    videoUrl:
+      "https://drive.google.com/file/d/1mvrgZIYtM9IQKs7HGH8zn2DMw_RttOx-/preview",
+  },
+  {
+    title: "Health Insights: Polished & Impactful",
+    description:
+      "Informative and visually polished health content edited for maximum clarity and impact.",
+    videoUrl:
+      "https://drive.google.com/file/d/1jOoGTghMLbzEBoq_LxC2PZRHYt_XdDch/preview",
+  },
+  {
+    title: "Awareness Amplified: Dynamic Health Stories",
+    description:
+      "A dynamic health awareness video edited to keep viewers informed and engaged.",
+    videoUrl:
+      "https://drive.google.com/file/d/10JRlg1VIEXWrFhRPGOS64iQp7MWp66iP/preview",
+  },
+  {
+    title: "Visual Flow: Seamless Health Narratives",
+    description:
+      "Smooth transitions and clean visuals combined to present valuable health insights.",
+    videoUrl:
+      "https://drive.google.com/file/d/1WKgywLRrtZ9S4ATcfz9-xRF9_Ds1sUdj/preview",
+  },
+  {
+    title: "Crystal Clear: Structured Health Communication",
+    description:
+      "A well-structured health video edit focused on clarity, simplicity, and audience connection.",
+    videoUrl:
+      "https://drive.google.com/file/d/1cBWD0ch_AGq1eRGOond-8_JtPxBHLNhR/preview",
+  },
+  {
+    title: "Storytelling Excellence: Educational Health Content",
+    description:
+      "Educational health content enhanced with professional editing and strong visual storytelling.",
+    videoUrl:
+      "https://drive.google.com/file/d/1mezNaHgr9eaLB6RCcu0gEziXnkVAdS2P/preview",
+  },
+  {
+    title: "Complex Made Simple: Engaging Health Education",
+    description:
+      "A compelling health education video with seamless editing that makes complex health topics accessible and engaging.",
+    videoUrl:
+      "https://drive.google.com/file/d/1HeRhp6t2In-vAISa1B0hteckCZN4qZXq/preview",
+  },
+  {
+    title: "Impactful Messaging: Professional Health Editing",
+    description:
+      "Professional health content editing that combines informative visuals with smooth pacing to deliver impactful health messages.",
+    videoUrl:
+      "https://drive.google.com/file/d/1wgzTSKhSijxEGA8tNP3WV8C7xKbSiYr3/preview",
   },
 ];
