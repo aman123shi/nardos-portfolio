@@ -4,6 +4,7 @@ import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Prototypes } from "../prototypes/Prototypes";
+import { VideoEditing } from "../video-editing/VideoEditing";
 import { motion, AnimatePresence } from "framer-motion";
 import { fadeIn, fadeInUp, staggerContainer } from "@/app/utils/animations";
 import { ImagePreviewModal } from "./ImagePreviewModal";
@@ -252,6 +253,7 @@ export function Work({ isDarkMode }: { isDarkMode: boolean }) {
           visibleProjects[currentProjectIndex]?.images?.length > 1
         }
       />
+      <VideoEditing isDarkMode={isDarkMode} />
       <Prototypes isDarkMode={isDarkMode} />
     </>
   );
