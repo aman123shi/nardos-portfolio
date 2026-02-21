@@ -18,7 +18,7 @@ export function Header({ isDarkMode }: { isDarkMode: boolean }) {
       </h3>
 
       <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[66px] font-Ovo leading-tight">
-        {"UI/UX Designer and Graphics Designer "}
+        {"UI/UX Designer and Social Media Manager "}
         {isDarkMode ? "" : ""}
       </h1>
       <p className="max-w-2xl mx-auto font-Ovo text-sm sm:text-base">

@@ -25,9 +25,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Nardos Shibeshi Portfolio | UI/UX Designer | Graphics Designer",
+  title: "Nardos Shibeshi Portfolio | UI/UX Designer | Social Media Manager",
   description:
-    "Nardos Shibeshi is a UI/UX Designer and Graphics Designer based in Addis Ababa, Ethiopia. She is passionate about creating beautiful and user-friendly designs.",
+    "Nardos Shibeshi is a UI/UX Designer and Social Media Manager based in Addis Ababa, Ethiopia. She is passionate about creating beautiful and user-friendly designs and effective social media strategies.",
 };
 
 export default function RootLayout({

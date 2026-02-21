@@ -19,7 +19,7 @@ export function About({ isDarkMode }: { isDarkMode: boolean }) {
         <div className="flex-1">
           <p className="mb-10 max-w-2xl font-Ovo">
             {" "}
-            I am an experienced UI/UX and grapics designer with more than 3
+            I am an experienced UI/UX Designer and Social Media Manager with more than 3
             years of professional experience in the field . In my career, I have
             had the privilege of collaborating with prestigious organizations,
             contributing to thier success and growth.{" "}

@@ -1,6 +1,6 @@
 # Nardos Shibeshi - UI/UX Designer Portfolio
 
-A modern, responsive portfolio website showcasing the work of Nardos Shibeshi, a UI/UX and Graphics Designer with over 3 years of professional experience. The website is built using Next.js and features a clean, user-friendly design with dark mode support.
+A modern, responsive portfolio website showcasing the work of Nardos Shibeshi, a UI/UX Designer and Social Media Manager with over 3 years of professional experience. The website is built using Next.js and features a clean, user-friendly design with dark mode support.
 
 [![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fnardos-shibeshi.vercel.app%2F)](https://nardos-shibeshi.vercel.app/)
 [![Made with Next.js](https://img.shields.io/badge/Made%20with-Next.js-000000?logo=Next.js)](https://nextjs.org/)
