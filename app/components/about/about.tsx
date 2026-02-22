@@ -1,4 +1,4 @@
-import { assets, infoList, toolsData } from "@/app/assets/assets";
+import { assets, infoList, toolsData, newToolsData } from "@/app/assets/assets";
 import Image from "next/image";
 
 export function About({ isDarkMode }: { isDarkMode: boolean }) {
@@ -16,7 +16,7 @@ export function About({ isDarkMode }: { isDarkMode: boolean }) {
           />
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 w-full">
           <p className="mb-10 max-w-2xl font-Ovo">
             {" "}
             I am an experienced UI/UX Designer and Social Media Manager with more than 3
@@ -25,7 +25,7 @@ export function About({ isDarkMode }: { isDarkMode: boolean }) {
             contributing to thier success and growth.{" "}
           </p>
 
-          <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+          <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mb-6">
             {infoList.map(({ description, icon, iconDark, title }, index) => (
               <li
                 key={index}
@@ -49,16 +49,28 @@ export function About({ isDarkMode }: { isDarkMode: boolean }) {
           <h4 className="my-6 text-gray-700 font-Ovo dark:text-white/80">
             Tools I use{" "}
           </h4>
-          <ul className="flex items-center gap-3 sm:gap-5">
-            {toolsData.map((tool, index) => (
-              <li
-                key={index}
-                className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
-              >
-                <Image src={tool} alt="tool" className="w-5 sm:w-7" />
-              </li>
-            ))}
-          </ul>
+          <div className="flex flex-col gap-4">
+            <ul className="flex items-center flex-wrap gap-3 sm:gap-5">
+              {toolsData.map((tool, index) => (
+                <li
+                  key={index}
+                  className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
+                >
+                  <Image src={tool} alt="tool" className="w-5 sm:w-7" />
+                </li>
+              ))}
+            </ul>
+            <ul className="flex items-center flex-wrap gap-3 sm:gap-5 ml-[60px] sm:ml-[76px]">
+              {newToolsData.map((tool, index) => (
+                <li
+                  key={index}
+                  className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
+                >
+                  <Image src={tool} alt="tool" className="w-5 sm:w-7" />
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>

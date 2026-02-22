@@ -162,14 +162,6 @@ export const assets = {
 
 export const workData = [
   {
-    title: "YouTube Thumbnails",
-    description:
-      "Eye-catching YouTube thumbnail designs created for various channels. These thumbnails are designed to maximize click-through rates with compelling visuals, clear text, and strategic composition that stands out in search results and recommendations.",
-    bgImage: thumb1,
-    images: [thumb1, thumb2, thumb3, thumb4, thumb5],
-    link: "https://example.com/photography",
-  },
-  {
     title: "JBL Headphones Landing Page",
     description:
       "A landing page for JBL headphones with a login page and a dashboard page with a sidebar and a main content area and a footer and a header and a logo and a search bar and a profile icon and a notification icon and a logout button",
@@ -286,6 +278,15 @@ export const workData = [
     images: [banners1, banners2],
     link: "https://example.com/photography",
   },
+
+  {
+    title: "YouTube Thumbnails",
+    description:
+      "Eye-catching YouTube thumbnail designs created for various channels. These thumbnails are designed to maximize click-through rates with compelling visuals, clear text, and strategic composition that stands out in search results and recommendations.",
+    bgImage: thumb1,
+    images: [thumb1, thumb2, thumb3, thumb4, thumb5],
+    link: "https://example.com/photography",
+  },
 ];
 
 export const serviceData = [
@@ -352,14 +353,13 @@ export const infoList = [
 
 export const toolsData = [
   assets.figma,
-  tool1,
   assets.canva_icon,
   assets.ai,
   assets.photoshop_icon,
-  tool2,
   assets.capcut_icon,
-  tool3,
 ];
+
+export const newToolsData = [tool1, tool2, tool3];
 
 interface PrototypeData {
   title: string;
@@ -444,16 +444,16 @@ export const videoEditingData: VideoEditingData[] = [
       "https://drive.google.com/file/d/1jOoGTghMLbzEBoq_LxC2PZRHYt_XdDch/preview",
   },
   {
-    title: "Awareness Amplified: Dynamic Health Stories",
+    title: "Free Courses Promotion Video",
     description:
-      "A dynamic health awareness video edited to keep viewers informed and engaged.",
+      "A clean and engaging promotional video highlighting free courses, designed to attract learners and clearly communicate valuable educational opportunities.",
     videoUrl:
       "https://drive.google.com/file/d/10JRlg1VIEXWrFhRPGOS64iQp7MWp66iP/preview",
   },
   {
-    title: "Visual Flow: Seamless Health Narratives",
+    title: "Motivational Video Edit",
     description:
-      "Smooth transitions and clean visuals combined to present valuable health insights.",
+      "A powerful and emotionally driven motivational video edit crafted to inspire confidence, resilience, and action through impactful visuals and smooth storytelling.",
     videoUrl:
       "https://drive.google.com/file/d/1WKgywLRrtZ9S4ATcfz9-xRF9_Ds1sUdj/preview",
   },
