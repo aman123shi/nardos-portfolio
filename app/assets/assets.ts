@@ -325,6 +325,14 @@ export const serviceData = [
   },
 
   {
+    icon: assets.data_encoding,
+    title: "Data Encoding",
+    description:
+      "Efficiently organizing data from different sources and inserting it into your system.",
+    link: "",
+  },
+
+  {
     icon: assets.tutor,
     title: "Mentorship",
     description: "Offering one to one mentorship and tutorials for students...",
