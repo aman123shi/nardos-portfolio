@@ -111,6 +111,8 @@ import tool1 from "./public/tool1.png";
 import tool2 from "./public/tool2.png";
 import tool3 from "./public/tool3.png";
 
+import social_media_icon from "./public/social-media.png";
+
 export const assets = {
   instagram_icon,
   linkedin_icon,
@@ -158,6 +160,7 @@ export const assets = {
   send_icon,
   right_arrow_bold,
   right_arrow_bold_dark,
+  social_media_icon,
 };
 
 export const workData = [
@@ -246,6 +249,15 @@ export const workData = [
   },
 
   {
+    title: "YouTube Thumbnails",
+    description:
+      "Eye-catching YouTube thumbnail designs created for various channels. These thumbnails are designed to maximize click-through rates with compelling visuals, clear text, and strategic composition that stands out in search results and recommendations.",
+    bgImage: thumb1,
+    images: [thumb1, thumb2, thumb3, thumb4, thumb5],
+    link: "https://example.com/photography",
+  },
+
+  {
     title: "Banners",
     description:
       "Bold Banners that Get Noticed.From online ads to event displays, our banner designs are crafted to capture attention and deliver your message with impact",
@@ -278,15 +290,6 @@ export const workData = [
     images: [banners1, banners2],
     link: "https://example.com/photography",
   },
-
-  {
-    title: "YouTube Thumbnails",
-    description:
-      "Eye-catching YouTube thumbnail designs created for various channels. These thumbnails are designed to maximize click-through rates with compelling visuals, clear text, and strategic composition that stands out in search results and recommendations.",
-    bgImage: thumb1,
-    images: [thumb1, thumb2, thumb3, thumb4, thumb5],
-    link: "https://example.com/photography",
-  },
 ];
 
 export const serviceData = [
@@ -299,7 +302,7 @@ export const serviceData = [
   },
 
   {
-    icon: assets.illustration,
+    icon: assets.social_media_icon,
     title: "Social Media Manager",
     description:
       "Strategic social media management to enhance your brand presence and engagement...",
@@ -315,10 +318,9 @@ export const serviceData = [
   },
 
   {
-    icon: assets.data_encoding,
-    title: "Data Encoding",
-    description:
-      "Efficiently organizing data from different sources and inserting it into your system.",
+    icon: assets.illustration,
+    title: "Graphics Design",
+    description: "Professional graphics design for your brand or business.",
     link: "",
   },
 
