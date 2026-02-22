@@ -77,15 +77,16 @@ export function VideoEditing({ isDarkMode }: { isDarkMode: boolean }) {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white dark:bg-darkTheme rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
             >
-              <div className="relative w-full flex items-center justify-center bg-gray-100 dark:bg-gray-900" style={{ height: '600px' }}>
-                <iframe
-                  src={video.videoUrl}
-                  title={video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full max-w-[337.5px] h-full max-h-[600px]"
-                  style={{ aspectRatio: '9/16' }}
-                />
+              <div className="relative w-full bg-gray-100 dark:bg-gray-900 py-4 flex justify-center items-center">
+                <div className="w-[90%] max-w-[500px] flex-shrink-0" style={{ aspectRatio: '3/4', maxHeight: '600px' }}>
+                  <iframe
+                    src={video.videoUrl}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-playfair mb-4 text-gray-900 dark:text-white">
